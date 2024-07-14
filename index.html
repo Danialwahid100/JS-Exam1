@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body data-bs-theme='dark'>
+    <div class="loading position-fixed d-flex justify-content-center align-items-center start-0 bottom-0 top-0 end-0">
+        <span class="loader"></span>
+    </div>
+
+    <div id="sideNav">
+        <div id="navTab" class="side-nav-menu">
+            <div class="tabs py-2 px-1 lh-lg">
+                <ul class="point links">
+                    <li id="searchh">Search</li>
+                    <li id="Category">Categories</li>
+                    <li id="Area">Area</li>
+                    <li id="Description">Ingredients</li>
+                    <li id="ContactUsBtn">Contact Us</li>
+                </ul>
+            </div>
+            <div class="navFooter p-3">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright © 2019 All Rights<br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div id="navHeader" class="navHeader d-flex text-center flex-column justify-content-between p-1">
+            <img src="yummy.png" class="bg-danger w-100" alt="">
+            <div class="iconsOpen d-flex justify-content-center align-content-center">
+                <i onclick="toggleSideNav()" id="openTab" class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            </div>
+            <div class="icons align-items-center justify-content-center">
+                <i class="fa-solid ps-1 py-1 fa-globe text-black d-block"></i>
+                <i class="fa-solid ps-1 py-1 fa-share-nodes text-black d-block"></i>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <div class="container d-block" id="container1">
+        <div class="row py-5 g-4" id="rowData">
+        </div>
+    </div>
+
+    <div class="container container2 d-none" id="container2">
+        <div class="row py-5 g-4">
+            <div class="col-md-12">
+                <input type="text" class="form-control" id="MealName" placeholder="Search by name">
+            </div>
+            <div id="mealImages" class="row mt-3">
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div id="mealDetails" class="container">
+        <div class="row">
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+

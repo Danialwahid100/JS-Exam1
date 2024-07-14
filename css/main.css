@@ -1,0 +1,95 @@
+ul li{
+    list-style: none;
+}
+body{
+    overflow: hidden;
+    transform: all 0.3s;
+}
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+.loading{
+    background-color: #000;
+    z-index: 222;
+}
+#navHeader img{
+    width: 80px;
+    background-color: white;
+}
+.point{
+    cursor: pointer;
+
+}
+
+#sideNav {
+    position: absolute;
+    transition: left 0.2s;
+}
+
+
+.meal-layer {
+    background-color: rgba(255, 255, 255, 0.914); 
+    width: 100%;
+    height: 0; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in;
+    padding: 15px; 
+    opacity: 0;
+    color: black; 
+    transform-origin: bottom;
+}
+
+.meal:hover .meal-layer {
+    height: 100%;
+    opacity: 1;
+}
+
+
+.side-nav-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -250px; /* Initially hide the navTab */
+    width: 250px;
+    background-color: #343a40;
+    z-index: 3;
+    transition: left 0.5s;
+}
+.navHeader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    left: 0; /* Initially show the navHeader */
+    background-color: white;
+    transition: left 0.5s;
+    z-index: 4;
+}
+.navHeader.open {
+    left: 250px; /* Move navHeader to the right */
+}
+.side-nav-menu.open {
+    left: 0; /* Show the navTab */
+}
